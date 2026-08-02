@@ -12,7 +12,7 @@ User=root
 # Absolute path to the cloned repo folder.
 WorkingDirectory=/root/telegram-worddetect
 # Absolute path to the venv's python + the script.
-ExecStart=/root/telegram-worddetect/venv/bin/python /root/telegram-worddetect/warnbot.py
+ExecStart=/root/telegram-worddetect/venv/bin/python -u /root/telegram-worddetect/warnbot.py
 # ---------------------------------------------
 
 # Restart automatically if it crashes or the server reboots.

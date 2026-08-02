@@ -37,6 +37,15 @@ KEYWORDS = [
 REGEX_PATTERNS = [
     # r"https?://(?!t\.me/yourgroup)\S+",   # any link that isn't your own group
 ]
+
+# ---------------------------------------------------------------------------
+# 2b. DEBUG LOGGING
+# ---------------------------------------------------------------------------
+# Turn these on only while testing. DEBUG_LOG_SKIPS explains why matching
+# messages are ignored, such as when the sender is a bot.
+DEBUG_LOG_SKIPS = True
+DEBUG_LOG_ALL_MESSAGES = False
+
 # ---------------------------------------------------------------------------
 # 3. THE WARNING MESSAGE (sent to the user's DM)
 # ---------------------------------------------------------------------------
