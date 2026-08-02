@@ -19,67 +19,6 @@ WATCH_GROUPS = [
 # Plain keywords — matched anywhere in the message, case-insensitive.
 # Grouped by category so you can delete whole sections you don't need.
 KEYWORDS = [
-    # --- Crypto / investment scams ---
-    "free crypto",
-    "airdrop",
-    "double your",
-    "double your money",
-    "investment opportunity",
-    "guaranteed profit",
-    "guaranteed returns",
-    "passive income",
-    "trading signals",
-    "pump and dump",
-    "pump group",
-    "mining rewards",
-    "claim your reward",
-    "claim your tokens",
-    "elon musk giveaway",
-    "usdt giveaway",
-    "bitcoin giveaway",
-    "10x returns",
-    "100x gem",
-    "forex trading",
-    "binary options",
-
-    # --- Recruitment / job scams ---
-    "earn from home",
-    "work from home",
-    "earn $",
-    "make money online",
-    "part time job",
-    "daily payout",
-    "easy money",
-    "hiring now",
-    "join my team",
-
-    # --- Contact / redirection bait ---
-    "dm me",
-    "dm me for",
-    "pm me",
-    "message me privately",
-    "click here",
-    "click the link",
-    "check my bio",
-    "check bio",
-    "link in bio",
-    "whatsapp me",
-    "contact admin",
-
-    # --- Suspicious links / invites ---
-    "t.me/joinchat",
-    "t.me/+",
-    "bit.ly/",
-    "tinyurl",
-    "cutt.ly",
-
-    # --- Adult / spam ---
-    "hot singles",
-    "onlyfans",
-    "sex",
-    "nude",
-    "18+",
-
     # --- Chinese escort / adult-service spam ---
     "下水",
     "修车",
@@ -89,7 +28,7 @@ KEYWORDS = [
     "大奶",
     "骚货",
 
-    # --- Add your own group-specific spam words below ---
+    # --- Add more Chinese spam words below ---
 
 ]
 
@@ -98,18 +37,24 @@ KEYWORDS = [
 REGEX_PATTERNS = [
     # r"https?://(?!t\.me/yourgroup)\S+",   # any link that isn't your own group
 ]
-
 # ---------------------------------------------------------------------------
 # 3. THE WARNING MESSAGE (sent to the user's DM)
 # ---------------------------------------------------------------------------
 # {name} is replaced with the user's first name.
 WARNING_MESSAGE = (
-    "Hi {name}, this is an automated moderation notice from the group.\n\n"
-    "Your recent message looked like spam or was flagged by our filters. "
-    "Please avoid posting promotional links or scam-like content — "
-    "repeated violations will lead to a ban.\n\n"
-    "If this was a mistake, just ignore this message."
+    "💦 <b>吉隆坡 One SPA</b> 💦\n\n"
+    "您好 {name}，看到你刚刚在群组里想找娱乐活动，推荐一家吉隆坡很受欢迎的下水店给你。\n\n"
+    "环境舒适、各个国家来的美女都有 当然包括AV妹子🍑\n\n"
+    "<b>想探索更多美女、价格和预约方式，可以点击下面的链接</b>\n"
+    # 👇 EDIT THIS: change the URL and the label text between the tags
+    "👉 <a href=\"https://t.me/kleznet168\">ONESPA高级水汇</a>"
 )
+
+# Optional image sent together with the warning (as the photo's caption).
+# Put an image file in this folder and set its name here, e.g. "warning.jpg".
+# Leave it as "" to send text only.
+# NOTE: with an image, the text must be under ~1024 characters (yours is fine).
+WARNING_IMAGE = "onespa.jpg"
 
 # ---------------------------------------------------------------------------
 # 4. SAFETY LIMITS (keep these sane to avoid your account being flagged)

@@ -148,7 +148,13 @@ async def handler(event):
         return
 
     try:
-        await client.send_message(uid, config.WARNING_MESSAGE.format(name=name))
+        text = config.WARNING_MESSAGE.format(name=name)
+        image = getattr(config, "WARNING_IMAGE", "")
+        if image and os.path.exists(image):
+            # Send the image with the warning as its caption
+            await client.send_file(uid, image, caption=text, parse_mode="html")
+        else:
+            await client.send_message(uid, text, parse_mode="html")
         state["warned"][str(uid)] = datetime.now(timezone.utc).isoformat()
         state["sent_today"] += 1
         save_state(state)
