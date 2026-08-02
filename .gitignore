@@ -1,0 +1,10 @@
+# Secrets — NEVER commit these
+.env
+*.session
+*.session-journal
+warnbot_state.json
+
+# Python
+venv/
+__pycache__/
+*.pyc
