@@ -1,0 +1,27 @@
+[Unit]
+Description=Telegram keyword-detection warning userbot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+
+# --- EDIT THESE THREE TO MATCH YOUR SERVER ---
+# The Linux user that owns the files (often "root" on a fresh droplet).
+User=root
+# Absolute path to the cloned repo folder.
+WorkingDirectory=/root/telegram-worddetect
+# Absolute path to the venv's python + the script.
+ExecStart=/root/telegram-worddetect/venv/bin/python /root/telegram-worddetect/warnbot.py
+# ---------------------------------------------
+
+# Restart automatically if it crashes or the server reboots.
+Restart=always
+RestartSec=10
+
+# Send the bot's print() output to the systemd journal.
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
